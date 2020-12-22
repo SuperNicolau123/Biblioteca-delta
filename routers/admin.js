@@ -24,7 +24,7 @@ router.post("/usuario/novo",(req, res) => {
      const novousuario = {
          nome : req.body.nome,
          turma : req.body.turma,
-         curso : req.boby.curso,
+         curso : req.body.curso,
          numero : req.body.numero,
          atividade : req.body.atividade,
          date : req.body.date,
