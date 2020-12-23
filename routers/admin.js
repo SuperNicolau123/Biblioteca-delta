@@ -5,15 +5,15 @@ require("../models/usuario")
 const usuario = mongoose.model("usuario")
 
 router.get("/", (req, res) =>{
-    res.render("../views/index.handlebars")
+    res.render("../front/admin/index")
 })
 
 router.get("/usuario", (req, res) =>{
-    res.render("../views/usuario.handlebars")
+    res.render("../front/admin/usuario")
 })
 
 router.get("/usuario/add", (req, res) =>{
-    res.render("../views/addusuario.handlebars")
+    res.render("../front/admin/addusuario")
 })
 
 router.get("/Graficos",(req, res) =>{
