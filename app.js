@@ -12,8 +12,8 @@
      app.use(bodyParser.urlencoded({extended:true}))
      app.use(bodyParser.json())
    //handlebars
-     app.engine('hamndlebars',handlebars({defaultLayout: 'main'}))
-     app.set('view engine','handlebars');
+     app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+     app.set('view engine', 'handlebars');
    //mongoose
      mongoose.Promise = global.Promise;
      mongoose.connect("mongodb://localhost/dadosb").then(() => {
