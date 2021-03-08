@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
-const usuario = mongoose.usuario;
-   
-const usuario = usuario({
+
+const usuario = mongoose.Schema({
     
     nome:{
        type : String,
@@ -27,10 +26,6 @@ const usuario = usuario({
         type : Date,
         default: Date.now
     },
-    time:{
-        type : Time,
-        default: Time.now
-    }
     
 })
 //Collection

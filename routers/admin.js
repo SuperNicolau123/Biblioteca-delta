@@ -5,15 +5,15 @@ require("../models/usuario")
 const usuario = mongoose.model("usuario")
 
 router.get("/", (req, res) =>{
-    res.render("admin/index")
+    res.render("/front/admin/index")
 })
 
 router.get("/usuario", (req, res) =>{
-    res.render("admin/usuario")
+    res.render("/front/admin/usuario")
 })
 
 router.get("/usuario/add", (req, res) =>{
-    res.render("admin/addusuario")
+    res.render("/front/admin/addusuario")
 })
 
 router.get("/Graficos",(req, res) =>{
@@ -22,13 +22,13 @@ router.get("/Graficos",(req, res) =>{
 
 router.post("/usuario/novo",(req, res) => {
      const novousuario = {
-         nome : req.body.nome,
-         turma : req.body.turma,
-         curso : req.boby.curso,
-         numero : req.body.numero,
-         atividade : req.body.atividade,
-         date : req.body.date,
-         time : req.body.time
+        nome : req.body.nome,
+        turma : req.body.turma,
+        curso : req.body.curso,
+        numero : req.body.numero,
+        atividade : req.body.atividade,
+        date : req.body.date,
+        time : req.body.time
      }
 
      new usuario(novousuario).save().then(()=>{
